@@ -1,0 +1,139 @@
+.App {
+  width:calc(100vw - 10px);
+  height:calc(100vh - 10px);
+  border:5px solid rgb(121, 153, 243);
+}
+
+.App .header{
+  display:flex;
+  position: relative;
+}
+
+.App .header ul.menu{
+  list-style-type: none;
+  display:flex;
+  flex-direction: row;  
+  max-width: 400px;
+  border-right:1px solid rgb(121, 153, 243);
+}
+
+.App .header ul.menu li{
+  margin-right: 40px;
+  padding:0px;
+}
+
+.App .main{
+  padding:40px;
+}
+
+.App .zone-user{
+  position:absolute;
+  right:20px;
+}
+
+.App .zone-user .sign-in{
+  height:48px;
+  vertical-align: middle;
+  display: table-cell;
+  font-weight: bold;
+}
+
+.App .zone-user .sign-in:hover{
+  color:rgb(121, 153, 243);
+  cursor:pointer;
+}
+
+.App .person{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.App .person .initials{
+  text-align: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgb(121, 153, 243);
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  line-height: 32px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  top: 10px;
+  left: 0;
+  background-position: center center;
+  background-size: 36px 36px;
+}
+
+.App .person .details{
+  padding: 0 8px;
+  box-sizing: border-box;
+  max-width: 240px;
+  min-width: 240px;
+  margin-left: 30px;
+}
+
+.App .person .full-name{
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+
+
+.App .floating-form{
+  display:none;
+  position:absolute;
+  top:60px;
+  right:40px;
+  width:300px;
+  background:white;
+  border:1px solid rgb(202, 215, 250);
+  border-radius: 5px;
+  padding:60px 25px;
+}
+
+.App .floating-form.visible{
+  display:block;
+}
+
+.App .floating-form header{
+  height:35px;
+  width:calc(100% - 50px);
+  border-bottom: 1px solid rgb(202, 215, 250);
+  position:absolute;
+  top:0;
+  padding-top:10px;
+}
+
+
+.App .floating-form input{
+  border-radius:3px;
+  border: 1px solid rgb(202, 215, 250);
+}
+
+.App .floating-form input:hover{
+  border: 1px solid #101e48;
+}
+
+.App .floating-form .row{
+  display:flex;
+}
+
+.App .floating-form .row .label{
+  width:120px;
+}
+
+
+.App .floating-form footer{
+  position:absolute;
+  bottom:0px;
+  height:35px;
+  padding-top:10px;
+}
