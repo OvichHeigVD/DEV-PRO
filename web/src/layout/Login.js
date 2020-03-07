@@ -1,31 +1,21 @@
-import React, { useContext, setState, useState } from 'react';
+import React, { useContext } from 'react';
 import { MainContext } from '../context/MainContext';
-import { useInput } from '../hooks/input';
+import SignInSide from './SignInSide';
 
 const Login = () => {
-    
-    const { value:email,        bind:bindEmail      } = useInput('');
-    const { value:password,     bind:bindPassword   } = useInput('');
-    
+
     const [ user, setUser, login, setLogin ] = useContext(MainContext);
     
-    const buttonSignIn = () => {
-        fetch('http://localhost:8080/authentication/user_login', {
-                method: 'POST',
-                credentials: 'include',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: "email=" + email + "&password=" + password
-            })
-        .then(response => response.json())
-        .then(response => setUser(response.data));
-    }
-
     const ConsoleLog = ({ children }) => {
         console.log(children);
         return false;
     };
      
     return (
+        <SignInSide is_open = { login.is_open } />
+    );
+
+    /*return (
     
         <section className={ "floating-form login-form " + ( login.is_open ? 'visible' : '' ) } >
             <ConsoleLog>{ login }</ConsoleLog>
@@ -46,7 +36,7 @@ const Login = () => {
                 <button className="button sing-in" onClick = { buttonSignIn }>Sing In</button>
             </footer>
         </section>
-    )
+    )*/
 }
 
 export default Login;

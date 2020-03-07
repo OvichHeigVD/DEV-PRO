@@ -13,8 +13,7 @@ const User = ( props ) => {
             credentials: 'include' // mandatory for every JSON fetch
         })
         .then(response => response.json())
-        .then(
-            (response) => {
+        .then((response) => {
                 // update user object in the MainContext
                 setUser(response.data);
             }

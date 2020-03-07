@@ -1,7 +1,7 @@
 .App {
   width:calc(100vw - 10px);
   height:calc(100vh - 10px);
-  border:5px solid rgb(121, 153, 243);
+  position: relative;
 }
 
 .App .header{
@@ -99,8 +99,8 @@
   padding:60px 25px;
 }
 
-.App .floating-form.visible{
-  display:block;
+.App .visible{
+  display:block !important;
 }
 
 .App .floating-form header{

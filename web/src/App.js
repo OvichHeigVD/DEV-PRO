@@ -5,7 +5,7 @@ import User from './layout/User'
 import Login from './layout/Login'
 import Home from './pages/Home'
 import About from './pages/About'
-import './App.css';
+import './css/App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
