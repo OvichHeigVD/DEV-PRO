@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, Component } from 'react';
 import { MainContext, MainProvider } from './context/MainContext';
 import Menu from './layout/Menu'
 import User from './layout/User'
@@ -9,11 +9,12 @@ import './css/App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
+
 const App = ( props ) => {
     //const context = useContext(MainContext);
-
+    
     useEffect(() => { 
-     // console.log(context);
+      //console.log(context);
     }, []);
 
     return (
@@ -22,7 +23,7 @@ const App = ( props ) => {
           <section className="App">
             <section className="header">
               <Menu /> 
-              <User />
+              <User  />
             </section>
             <section className="main">
               <Switch>

@@ -74,6 +74,7 @@ export default function SignInSide(props) {
 
     const { value:email,        bind:bindEmail      } = useInput('');
     const { value:password,     bind:bindPassword   } = useInput('');
+    
     const buttonSignIn = (e) => {
         e.preventDefault();
         fetch('http://localhost:8080/authentication/user_login', {
