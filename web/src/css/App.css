@@ -9,6 +9,15 @@
   position: relative;
 }
 
+.App .header a{
+  text-decoration: none;
+  color:rgba(0, 0, 0, 0.87);
+}
+
+.App .header a:hover{
+  font-weight: bold;
+}
+
 .App .header ul.menu{
   list-style-type: none;
   display:flex;
@@ -23,7 +32,7 @@
 }
 
 .App .main{
-  padding:40px;
+  padding: 20px 40px;
 }
 
 .App .zone-user{
