@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     display:'none',
     position: 'absolute',
     right: '20px',
-    top: '0px'
+    top: '50px'
   },
   grid_container : {
     borderRadius: '10px'
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding:'25px 0px',
-    margin: theme.spacing(8, 4),
+    margin: theme.spacing(4, 4),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'

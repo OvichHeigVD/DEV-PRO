@@ -1,16 +1,56 @@
-import React from 'react';
-import {Link } from "react-router-dom";
+import React, { Link } from 'react';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import { useHistory } from "react-router-dom";
 
-class Menu extends React.Component{
+const useStyles = makeStyles({
+    root: {
+      flexGrow: 1,
+      maxWidth: "100%"
+    },
+});
+
+const Menu = () => {
+    const classes = useStyles();
+    const [value, setValue] = React.useState(0);
     
-    render(){
-        return (
-            <ul className="menu">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-            </ul>
-        )
-    }
+    let history = useHistory();
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+     };
+
+     const handleClick = (link) => {
+        console.log(link);
+        history.push(link);
+     }
+    
+    return (
+        <Paper square className={classes.root}>
+        <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            textColor="secondary"
+            aria-label="icon label tabs example"
+        >
+            <Tab 
+                label="Home" 
+                to="/"      
+                onClick={ () => handleClick("/") }    
+            />
+            <Tab 
+                label="About" 
+                to="/about"      
+                onClick={ () => handleClick("/about") }  
+            />
+            
+        </Tabs>
+        </Paper>
+        
+    )
 }
 
-export default Menu;
+export default  Menu;

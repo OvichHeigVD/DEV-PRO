@@ -1,6 +1,6 @@
 .App {
-  width:calc(100vw - 10px);
-  height:calc(100vh - 10px);
+  width:calc(100vw);
+  height:calc(100vh);
   position: relative;
 }
 
@@ -35,11 +35,6 @@
   padding: 20px 40px;
 }
 
-.App .zone-user{
-  position:absolute;
-  right:20px;
-}
-
 .App .zone-user .sign-in{
   height:48px;
   vertical-align: middle;
@@ -56,10 +51,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 48px;
+  height: 46px;
 }
 
-.App .person .initials{
+.App .person .avatar{
   text-align: center;
   height: 32px;
   width: 32px;
@@ -72,7 +67,7 @@
   line-height: 32px;
   transition: all 250ms ease-in-out;
   cursor: pointer;
-  top: 10px;
+  top: 7px;
   left: 0;
   background-position: center center;
   background-size: 36px 36px;
@@ -88,7 +83,6 @@
 
 .App .person .full-name{
     font-size: 13px;
-    font-weight: 600;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
